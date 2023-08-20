@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\TravelSafeBookingApi.props" />
+</Project>
