@@ -1,4 +1,6 @@
-﻿namespace TravelSafeBookingApi.DataModels
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace TravelSafeBookingApi.DataModels
 {
     public class CustomerDataModel : BaseDataModel
     {
@@ -35,14 +37,29 @@
         /// <summary>
         /// Arrival Date of the Customer
         /// </summary>
-        public DateTime ArrivalDate { get; set; }
+        public DateTime DepatureDate { get; set; }
 
         /// <summary>
         /// The title of the customer
         /// </summary>
         public string Title { get; set; }
 
+        /// <summary>
+        /// The gender of the customer
+        /// </summary>
         public Gender Gender { get; set; }
+
+        /// <summary>
+        /// The foreign key of the bus
+        /// </summary>
+        public string BusId { get; set; }
+
+        /// <summary>
+        /// The bus information of the customer
+        /// </summary>
+        [ForeignKey(nameof(BusId))]
+        public BusesDataModel BusOrder { get; set; }
+
 
     }
 
