@@ -15,6 +15,7 @@ namespace TravelSafeBookingApi.Data
         public DbSet<BusRoutesDataModel> BusRoutes { get; set; }
         public DbSet<BusesDataModel> Buses { get; set; }
         public DbSet<StatesDataModel> StatesInfo { get; set; } 
+        public DbSet<PaymentTransactions> Payments { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
