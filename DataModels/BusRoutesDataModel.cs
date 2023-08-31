@@ -8,9 +8,14 @@ namespace TravelSafeBookingApi.DataModels
     public class BusRoutesDataModel : BaseDataModel
     {
         /// <summary>
-        /// Bus route title
+        /// Where the customer leaves
         /// </summary>
-        public string RouteTitle { get; set; }
+        public string From { get; set; }
+
+        /// <summary>
+        /// The destination of the customer
+        /// </summary>
+        public string To { get; set; }
 
         /// <summary>
         /// Bus route information

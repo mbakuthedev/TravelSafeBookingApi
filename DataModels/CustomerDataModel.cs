@@ -38,9 +38,17 @@
         public DateTime ArrivalDate { get; set; }
 
         /// <summary>
-        /// Customers List of Reservations
+        /// The title of the customer
         /// </summary>
-        public List<ReservationDataModel> Reservations { get; set; }   
+        public string Title { get; set; }
 
+        public Gender Gender { get; set; }
+
+    }
+
+    public enum Gender
+    {
+        Male = 0,
+        Female = 1 
     }
 }

@@ -30,6 +30,7 @@ namespace TravelSafeBookingApi.Extensions
             service.AddScoped<BusOperations>()
                 .AddScoped<RouteOperation>()
                 .AddScoped<BusStateOperations>();
+
             return service;
         }
         public static IServiceCollection ApplyDbContext(this IServiceCollection services, IConfiguration config)
