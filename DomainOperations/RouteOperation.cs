@@ -44,8 +44,10 @@ namespace TravelSafeBookingApi.DomainOperations
                 // Fire the transaction
                 var routes = new BusRoutesDataModel
                 {
-                    RouteTitle = model.RouteTitle,
-                    RouteInfo = model.RouteInfo
+                    From = model.From,
+                    To = model.To,
+                    RouteInfo = model.RouteInfo,
+                    Price = model.Price
                 };
 
                 // Check if the values are null
@@ -170,7 +172,8 @@ namespace TravelSafeBookingApi.DomainOperations
 
                 // Set the new information
                 busRoutes.RouteInfo = model.RouteInfo;
-                busRoutes.RouteTitle = model.RouteTitle;
+                busRoutes.From = model.From;
+                busRoutes.To = model.To;
                 busRoutes.Price = model.Price;
 
                 // Update the price in the database
